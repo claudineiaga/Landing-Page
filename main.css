@@ -1,0 +1,251 @@
+
+*{
+    box-sizing:border-box;
+}
+:root{
+    --white:#fff;
+    --darkred:#eff307;
+}   
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #061221;
+    color:#fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}   
+a,li,button,i,.button{
+    text-decoration: none;
+    outline: none !important;
+    list-style: none;
+    transition: 0.5s;
+}   
+.title{
+    font-family: 'Merriweather', serif;
+    font-size:3em;
+    font-weight:600;
+}   
+.sub-title{
+    font-size:1.8em;
+    font-weight:200;
+    font-weight: bold;
+}
+    
+.btn1{
+    display:inline-block;
+    text-align:center;
+    border-radius:40px;
+    padding:20px 40px;
+    font-size: 1.5rem;    
+}  
+.btn1{
+    background-color:blue;
+    color:var(--white);
+}   
+.btn1:hover{
+    background:rgb(29, 117, 9);
+    color:var(--darkred);
+}      
+@media (max-width:920px){
+    .title{
+        font-size:1.3em;
+    }
+    .sub-title{
+        font-size:1em;
+    }
+    .btn1{
+        padding:15px 30px;
+    }
+}
+
+header{
+    position:fixed;
+    top:2rem;
+    width:100%;
+    z-index:99999;
+    transition:0.5s;
+}    
+.topnav {
+    overflow: hidden;
+    background-color: rgba(62, 126, 58, 0.8);
+    width:80%;
+    margin:auto; 
+    box-shadow:0px 6px 16px -6px rgba(1,1,1,0.7);
+    transition:0.5s;
+    } 
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 16px;
+    margin:auto 1rem;
+    text-decoration: none;
+    font-size: 17px;
+    position:relative;
+}
+ 
+.logo{
+    width:40px;
+    position:absolute;
+    top:1rem;
+    background-color:#fff;
+    border-radius:5px;
+} 
+#icon{
+    float:right;
+}   
+#active{
+    display:flex;
+    font-weight:bold;
+    font-family: 'Titillium Web', sans-serif;
+}   
+#active:hover{
+    color:rgb(250, 246, 24);
+}   
+.topnav .icon {
+    display: none;
+}   
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+    
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 24px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin:auto 1rem;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #539e4d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top:2px solid #3a7d0d;
+}
+.dropdown-content a {
+    float: none;
+    color: rgb(242, 237, 237);
+    padding: 8px 16px;
+    margin:auto 0rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+    
+.topnav a:hover, .dropdown:hover .dropbtn {
+    color: #050d5f;
+} 
+.dropdown-content a:hover {
+    background-color: rgb(232, 225, 15);
+    color: black;
+}   
+.dropdown:hover .dropdown-content {
+    display: block;
+}   
+@media screen and (max-width: 1120px) {
+    .logo{
+        width:20px;
+        position:static;
+    }
+    .dropdown .dropbtn {
+        padding: 14px 16px;
+    }
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    #active{
+        display:none;
+    }
+}
+    
+@media screen and (max-width: 1120px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 14px 16px;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    }
+.banner{
+    width:100%;
+    height:100vh;
+    display:flex;
+    position:relative;
+    background: linear-gradient(rgba(1,1,1,.5), rgba(1,1,1,.5)), 
+    url("canarinho.jpg");
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:right;
+}
+.banner .content{
+    height:100%;
+    position:relative;
+    background-color: transparent;
+    background-image: linear-gradient(319deg, var(--darkred) ,rgb(59, 154, 59));
+    transform: skew(20deg);
+    position:absolute;
+    left:-10%;
+    width:60%;
+    display:flex;
+    align-items:center;
+    justify-content:left;
+} 
+.banner .content section{
+    padding:0 10rem;
+    transform: skew(-20deg);
+    width:100%;
+    color:var(--white);
+    letter-spacing:0.08em;
+    z-index:11111111;
+}
+    
+@media (max-width:1120px){
+    .banner .content section{
+        padding:0 8rem;
+    }
+}
+@media (max-width:920px){
+    .banner{
+        background-attachment:local;
+    }
+    .banner .content{
+        position:static;
+        left:0%;
+        width:100%;
+        background-image:none;
+    }
+    .banner .content section{
+        padding:0rem;
+        padding:2rem;
+    }
+}
